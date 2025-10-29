@@ -1,0 +1,113 @@
+/* ============================= */
+/* 🌟 HOME PAGE STYLING */
+/* ============================= */
+
+.home {
+  min-height: 100vh;
+  padding: 3rem 0;
+  width: 100%;
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔍 Search Bar Section */
+.search-form {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #333;
+  box-shadow: 0 0 0 2px #e50914;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #ff0f23;
+  transform: translateY(-2px);
+}
+
+/* 🎥 Movie Grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+  width: 90%;
+  max-width: 1300px;
+  box-sizing: border-box;
+  padding: 1rem 0;
+}
+
+/* 💬 Loading & Error Messages */
+.loading,
+.error-message {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .home {
+    padding: 2rem 0;
+  }
+
+  .search-form {
+    gap: 0.6rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .search-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+}
